@@ -1,0 +1,220 @@
+/*CSS Document for Getty Mobile Prototype*/
+* {
+	margin: 0; padding: 0; border: 0;
+	}
+
+body {
+	background-color: #cc6666;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	word-wrap: break-word;
+	padding-left: 12px;
+	
+	}
+
+a {
+	color: #36c; text-decoration: none;
+	}
+
+a:hover {
+	color: #36c; text-decoration: underline;
+	}
+
+p, input[type="submit"] {
+	padding: 2px;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 2px;
+	}
+
+h1 {
+	font-size: 18px;
+	color:#ffffff; text-decoration:bold;
+	}
+
+h2 {
+	font-size: 15px;
+	color:#ffffff; text-decoration:bold;
+	}
+
+h3 {
+	font-size: 12px;
+	}
+
+h4 {
+	font-size: 140%;
+	}
+p {
+	font-size: 120%;
+	}
+
+input[type="text"], select, input[type="submit"] {
+	border: 1px solid #000;
+	}
+
+select {
+	width: 205px;
+	}
+
+input[type="submit"] {
+	cursor: pointer; font-size: 9px;
+	}
+table {
+	padding: 2px;
+	}
+tr {
+	padding-left: 20px;
+	}
+
+caption {
+	font-weight: bold;
+	}
+
+.button {
+	font-size: 16px;
+	font-weight: bold;
+	color:#ffffff;
+	background-color:#f44336;
+	padding: 12px 15px;
+	text-align: center;
+	border-radius: 8px;
+	}
+.button:hover {
+	font-size: 16px;
+	font-weight: bold;
+	color:#f44336;
+	background-color:#ffffff;
+	padding: 12px 15px;
+	text-align: center;
+	border-radius: 8px;
+	align: center;	}
+.footer {
+	background-color: #ffffff;
+	width: 120%;
+	height:20px;
+	text-align: center;
+	text-decoration: bold;
+	color: #c66;
+	
+	
+}
+/*////MAIN WRAP AND DIVS____*/
+
+.main_contain {
+	padding-left: 3px;
+	}
+
+.object_header{
+	background-image:url(../images/menu-bar_bkg.jpg);
+	background-repeat:repeat;
+	background-position:right top;
+	}
+
+.object_container {
+	position: relative;
+	word-wrap: break-word;
+	width:100%;
+	}
+
+.arrows {
+	width: 27px;
+	}
+
+.object_container img {
+	max-width: 320px; max-height: 320px; margin: 2px;
+	}
+
+.object img {
+	max-width: 320px; max-height: 320px;
+	}
+
+.object small {
+	clear: left;
+	}
+
+.footer {
+	margin-top: 7px; border-top: 2px solid #999; padding-top: 5px;
+	}
+
+.search_result {
+	padding: 7px 0;
+	}
+
+.search_result td:first-child img {
+	max-width: 80px; max-height: 80px;
+	}
+
+.search_result td:first-child {
+	width: 80px;
+	}
+
+.search_result td+td {
+	padding-left: 5px;
+	}
+
+.visitor_info {
+	margin-bottom: 10px;
+	word-wrap: break-word;
+	}
+
+#hours td:first-child {
+	width: 120px;
+	}
+
+.calendar_search {
+	background-color: #e1e1e1; border: 1px solid #000; min-width: 200px; margin-bottom: 5px;
+	}
+
+.scheduled_events {
+	width: 240px; margin-top: 5px; background-color: powderblue;
+	}
+
+.scheduled_events_villa {
+	width: 240px; margin-top: 5px; background-color: oldlace;
+	}
+
+.event_type {
+	background-color: skyblue; font-weight: bold;
+	}
+
+#event_type_villa {
+	background-color: sandybrown; font-weight: bold;
+	}
+
+.aux_nav {
+	list-style-type: none;
+	}
+
+.aux_nav li {
+	display: inline;
+	}
+
+.artist_name {
+	list-style-type: none;
+	}
+
+.artist_name li {
+	display: inline;
+	}
+
+.plus_sign {
+	border: 1px solid #36c; padding: 2px 4px; color: #fff; background-color: #36c;
+	}
+
+.plus_sign:hover {
+	color: #fff; text-decoration: none;
+	}
+
+.error_bg {
+	background: url(../images/error_bg.jpg) 0 0 no-repeat;
+	min-height: 320px;
+	}
+
+.audio {
+	background: #36c url(../images/audio.jpg) left center no-repeat; padding-left: 25px;
+	}
+
+.view_objects {
+	background: #36c url(../images/eye.jpg) left center no-repeat; padding-left: 25px;
+	}
