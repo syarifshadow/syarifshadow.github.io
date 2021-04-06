@@ -11,8 +11,8 @@
 <meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
 <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
 
-<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
 
 <div class="AR-tip">
 	<p>AR ini berisi dua obyek. Satu patung chairil anwar karya Widagdo tahun 1955 di kayu tangan, dan yang kedua adalah recognisi dari Affandi terhadap pameran Alumni Sekolah Seni Rupa Indonesia Malang, tahun 1987 di Ancol</p>
@@ -28,10 +28,10 @@
 <a-scene embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' >
 	
 	<a-assets>
-		<a-asset-item id="AF-obj" src="https://raw.githack.com/syarifshadow/model/master/AF.obj"></a-asset-item>
-		<a-asset-item id="AF-mtl" src="https://raw.githack.com/syarifshadow/model/master/AF.mtl"></a-asset-item>
-		<a-asset-item id="adam-obj" src="https://raw.githack.com/syarifshadow/model/master/adam.obj"></a-asset-item>
-		<a-asset-item id="adam-mtl" src="https://raw.githack.com/syarifshadow/model/master/adam.mtl"></a-asset-item>
+		<a-asset-item id="AF-obj" src="./AF.obj"></a-asset-item>
+		<a-asset-item id="AF-mtl" src="./AF.mtl"></a-asset-item>
+		<a-asset-item id="adam-obj" src="./adam.obj"></a-asset-item>
+		<a-asset-item id="adam-mtl" src="./adam.mtl"></a-asset-item>
 	</a-assets>
 
 	<a-marker preset="hiro" id="aframe-scene">
