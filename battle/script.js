@@ -1,7 +1,7 @@
 console.clear()
 
-var londonModel = document.querySelector('#Affandi'),
-		kyivModel = document.querySelector('#Widagdo'),
+var AFModel = document.querySelector('#Affandi'),
+		WidagdoModel = document.querySelector('#Widagdo'),
 		rotateBtn = $(".rotate"),
 		scaleBtn = $(".scale"),
 		switchBtn = $(".switch"),
@@ -17,12 +17,12 @@ gotitBtn.click(function(){
 
 rotateBtn.click(function(){
 	if (rotateBtn.hasClass("rotate_fade")){
-		londonModel.emit('endRotate');
-		kyivModel.emit('endRotate');
+		AFModel.emit('endRotate');
+		WidagdoModel.emit('endRotate');
 		rotateBtn.removeClass("rotate_fade");
 	} else {
-		londonModel.emit('rotate');
-		kyivModel.emit('rotate');
+		AFModel.emit('rotate');
+		WidagdoModel.emit('rotate');
 		rotateBtn.addClass("rotate_fade");
 	}
 });
@@ -33,33 +33,33 @@ var scaleFlag = 0,
 scaleBtn.click(function(){
 	if (scaleFlag == 0){
 		scaleFlag = 1;
-		londonModel.setAttribute("scale", scale="0.55 0.55 0.55");
-		kyivModel.setAttribute("scale", scale="0.55 0.55 0.55");
+		AFModel.setAttribute("scale", scale="0.55 0.55 0.55");
+		WidagdoModel.setAttribute("scale", scale="0.55 0.55 0.55");
 		scaleBtn.addClass("scale_one");
 	} else if (scaleFlag == 1) {
 		scaleFlag = 2;
-		londonModel.setAttribute("scale", scale="0.7 0.7 0.7");
-		kyivModel.setAttribute("scale", scale="0.7 0.7 0.7");
+		AFModel.setAttribute("scale", scale="0.7 0.7 0.7");
+		WidagdoModel.setAttribute("scale", scale="0.7 0.7 0.7");
 		scaleBtn.addClass("scale_two");
 		scaleBtn.removeClass("scale_one");
 	} else if (scaleFlag == 2) {
 		scaleFlag = 0;
-		londonModel.setAttribute("scale", scale="0.4 0.4 0.4");
-		kyivModel.setAttribute("scale", scale="0.4 0.4 0.4");
+		AFModel.setAttribute("scale", scale="0.4 0.4 0.4");
+		WidagdoModel.setAttribute("scale", scale="0.4 0.4 0.4");
 		scaleBtn.removeClass("scale_two");
 	}
 });
 
 switchBtn.click(function(){
-	if (kyivFlag == false){
-		kyivFlag = true;
+	if (WidagdoFlag == false){
+		Widagdolag = true;
 		switchBtn.html("Affandi");
-		londonModel.setAttribute("visible", false);
-		kyivModel.setAttribute("visible", true);
+		AFModel.setAttribute("visible", false);
+		WidagdoModel.setAttribute("visible", true);
 	} else {
-		kyivFlag = false
+		WidagdoFlag = false
 		switchBtn.html("Widagdo");
-		londonModel.setAttribute("visible", true);
-		kyivModel.setAttribute("visible", false);
+		AFModel.setAttribute("visible", true);
+		WidagdoModel.setAttribute("visible", false);
 	}
 });
