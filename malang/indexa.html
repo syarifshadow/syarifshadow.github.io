@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Widagdo-Affandi</title>
+  <link rel="stylesheet" href="./normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
+<meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+
+<script src="./aframe.min.js"></script>
+<script src="./aframe-ar.js"></script>
+
+<div class="AR-tip">
+	<p>AR ini berisi dua obyek. Satu patung chairil anwar karya Widagdo tahun 1955 di kayu tangan, dan yang kedua adalah recognisi dari Affandi terhadap pameran Alumni Sekolah Seni Rupa Indonesia Malang, tahun 1987 di Ancol</p>
+	<a class="gotit" href="#">Masuk!</a>
+</div>
+
+<div class="btns-wrap">
+	<div class="btn rotate"></div>
+	<div class="btn scale"></div>
+	<div class="btn switch">Widagdo</div>
+</div>
+
+<a-scene embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;' >
+	
+	<a-assets>
+		<a-asset-item id="AF-obj" src="./AF.obj"></a-asset-item>
+		<a-asset-item id="AF-mtl" src="./AF.mtl"></a-asset-item>
+		<a-asset-item id="adam-obj" src="./adam.obj"></a-asset-item>
+		<a-asset-item id="adam-mtl" src="./adam.mtl"></a-asset-item>
+	</a-assets>
+
+	<a-marker preset="kanji" id="aframe-scene">
+		
+		<a-entity light="type: hemisphere; color: #fefddd; groundColor: #fefddd; intensity: 1.2"></a-entity>
+		
+		<a-entity id="Widagdo" rotation="0 -90 0" side="double" position="0.0 0.2 0" scale="0.4 0.4 0.4" obj-model="obj: #AF-obj; mtl: #AF-mtl">
+			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
+			</a-animation>
+		</a-entity>
+		
+		<a-entity id="Affandi" visible="false" rotation="0 -90 0" side="double" position="0.0 0.2 0" scale="0.4 0.4 0.4" obj-model="obj: #adam-obj; mtl: #adam-mtl">
+			<a-animation attribute="rotation" begin="rotate" end="endRotate" dur="26000" fill="forwards" to="0 270 0" repeat="indefinite" easing="linear">
+			</a-animation>
+		</a-entity>
+		
+	</a-marker>
+	
+	<a-entity camera></a-entity>
+	
+</a-scene>
+<!-- partial -->
+  <script src='./jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
