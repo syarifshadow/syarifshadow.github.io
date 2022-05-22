@@ -99,7 +99,7 @@ class Sketch {
         loader.setDRACOLoader(dracoLoader);
 
 
-        loader.load('./barbebleue2.glb', (gltf) => {
+        loader.load('./singosari.glb', (gltf) => {
                 this.gltf = gltf;
                 this.scene.add(this.gltf.scene);
                 this.steps = this.gltf.cameras.length;
