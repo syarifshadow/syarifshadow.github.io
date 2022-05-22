@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'imfellenglish';
+    src: url('./IMFellEnglish-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('./Nunito-Regular.ttf');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #000000;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: none;
+    background-color: black;
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.webgl:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+    width: 100vw;
+}
+
+h1 .title.small {
+    display: block;
+    font-family: nunito;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    color: #959595;
+    line-height: 45px;
+    opacity: 0;
+}
+
+h1 .title.big {
+    display: block;
+    font-family: imfellenglish;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: -2px;
+    margin-left: -2px;
+    opacity: 0;
+}
+
+@media screen and (max-width: 640px) {
+    h1 .title.small {
+        font-size: 9px;
+        letter-spacing: 2px;
+        text-indent: 2px;
+        line-height: 30px;
+    }
+    h1 .title.big {
+        font-size: 30px;
+        line-height: 20px;
+        letter-spacing: -2px;
+        margin-left: -2px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
+    pointer-events: none;
+}
+
+.chrome {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.navigation {
+    display: block;
+    left: 50%;
+    pointer-events: all;
+}
+
+.button {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.circle {
+    stroke: #222222;
+    stroke-dasharray: 157;
+    stroke-dashoffset: 157;
+    fill: rgba(133, 133, 133, 0.1);
+    transition: all .5s;
+}
+
+.arrow {
+    fill: #adadad;
+    transition: all .2s;
+}
+
+.button:hover .circle {
+    stroke: #e2e2e2;
+    stroke-dashoffset: 0;
+}
+
+.button:hover .arrow {
+    fill: #e2e2e2;
+    transform: scale(1.3) translate(-5px, -5px);
+}
+
+.button.previous {
+    transform: translate(-110%, 0px);
+}
+
+.button.next {
+    transform: translate(10%, 0px);
+}
+
+.loader {
+    position: absolute;
+    color: #ffffff;
+    font-family: nunito;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    text-transform: uppercase;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
